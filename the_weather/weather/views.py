@@ -2,9 +2,10 @@ from django.shortcuts import render
 import requests
 from .models import City
 from .forms import CityForm 
+
 # Create your views here.
 def index(request):
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=1889951139b1a7f491e9f1af29cf8a90'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid={SECRET_KEY}'
 
     if request.method == "POST":
         pass
